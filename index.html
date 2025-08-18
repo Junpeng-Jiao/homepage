@@ -7,14 +7,7 @@
 </head>
 
 <style>
-body {
-    background-image: url('back.png');
-    background-size: cover;      /* 覆盖整个页面 */
-    background-attachment: fixed; /* 固定背景不滚动 */
-    background-repeat: no-repeat; /* 禁止平铺 */
-    margin: 0;
-    padding: 0;
-  }
+
   /* 方法1：直接降低背景图片透明度 */
   body::before {
     content: "";
@@ -22,8 +15,8 @@ body {
     background-size: cover;      /* 覆盖整个页面 */
     background-attachment: fixed; /* 固定背景不滚动 */
     background-repeat: no-repeat; /* 禁止平铺 */
-    top: 0;
-    left: 0;
+    margin: 0;
+    padding: 0;
     opacity: 0.3; /* 透明度（0.3 = 30% 可见） */
     z-index: -1;
   }
