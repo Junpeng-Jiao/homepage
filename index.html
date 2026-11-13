@@ -1,96 +1,547 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Junpeng Jiao (焦骏鹏) — YMSC, Tsinghua University</title>
+<meta name="description" content="Junpeng Jiao (焦骏鹏), Assistant Professor at the Yau Mathematical Sciences Center, Tsinghua University. Birational geometry, the minimal model program, and singularity theory.">
+<link rel="canonical" href="https://junpeng-jiao.github.io/homepage/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Junpeng Jiao (焦骏鹏) — YMSC, Tsinghua University">
+<meta property="og:description" content="Assistant Professor at the Yau Mathematical Sciences Center, Tsinghua University. Birational geometry, the minimal model program, and singularity theory.">
+<meta property="og:image" content="https://junpeng-jiao.github.io/homepage/assets/photo.jpg">
+<meta property="og:url" content="https://junpeng-jiao.github.io/homepage/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2323594a'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='32' fill='%23ffffff' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
 
-<title>Junpeng Jiao's Homepage </title>
- 
+<style>
+@font-face {
+  font-family: "Inter var";
+  src: url("assets/fonts/inter-var.woff2") format("woff2");
+  font-weight: 400 600; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url("assets/fonts/newsreader-roman.woff2") format("woff2");
+  font-weight: 300 500; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url("assets/fonts/newsreader-italic.woff2") format("woff2");
+  font-weight: 300 400; font-style: italic; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --paper: #ffffff;
+  --ink: #141b19;
+  --ink-2: #3a4541;
+  --muted: #79837e;
+  --rule: #e6e6e1;
+  --accent: #23594a;
+  --accent-soft: #eef4f1;
+
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino,
+    Georgia, "Songti SC", "Source Han Serif SC", "SimSun", serif;
+  --sans: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+
+  --measure: 42rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 40px; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.78;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 400; letter-spacing: -0.015em; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(35, 89, 74, .28);
+  transition: border-color .18s, color .18s;
+}
+a:hover { border-bottom-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+::selection { background: var(--accent-soft); }
+
+.column {
+  width: 100%;
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: clamp(22px, 6vw, 40px);
+}
+
+/* ============ masthead ============ */
+.masthead {
+  padding-block: clamp(56px, 9vw, 96px) clamp(28px, 4vw, 40px);
+  text-align: center;
+}
+.face {
+  width: 124px;
+  height: 124px;
+  margin: 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 14%;
+  border: 1px solid var(--rule);
+  box-shadow: 0 0 0 6px #fff, 0 0 0 7px var(--rule);
+}
+.masthead h1 {
+  margin-top: 1.55rem;
+  font-size: clamp(2.4rem, 5.6vw, 3.05rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+.masthead .cn {
+  margin-top: .55rem;
+  font-family: var(--serif);
+  font-size: 1rem;
+  letter-spacing: .42em;
+  text-indent: .42em;
+  color: var(--muted);
+}
+.masthead .title {
+  margin-top: 1.35rem;
+  font-family: var(--sans);
+  font-size: .825rem;
+  letter-spacing: .07em;
+  color: var(--ink-2);
+}
+.masthead .title span { color: var(--muted); }
+
+.masthead .contact {
+  margin-top: .7rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem .9rem;
+  font-family: var(--sans);
+  font-size: .805rem;
+  color: var(--muted);
+}
+.masthead .contact a { border-bottom: 1px solid rgba(35, 89, 74, .2); }
+
+.masthead nav {
+  margin-top: 1.9rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .3rem 1.5rem;
+  font-family: var(--sans);
+  font-size: .715rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.masthead nav a {
+  color: var(--muted);
+  border: 0;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+.masthead nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ============ sections ============ */
+main { padding-bottom: 8px; }
+
+.section {
+  padding-block: clamp(30px, 4vw, 42px);
+  border-top: 1px solid var(--rule);
+}
+
+.section h2 {
+  display: flex;
+  align-items: baseline;
+  gap: .85rem;
+  font-size: 1.42rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+.section h2 .n {
+  font-family: var(--sans);
+  font-size: .66rem;
+  letter-spacing: .16em;
+  color: var(--accent);
+  opacity: .75;
+  font-variant-numeric: tabular-nums;
+}
+
+.prose {
+  color: var(--ink-2);
+}
+.prose + .prose { margin-top: .9rem; }
+.prose strong { font-weight: 500; color: var(--ink); }
+
+/* research list */
+.interests {
+  list-style: none;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: .1rem;
+  font-family: var(--sans);
+  font-size: .845rem;
+  color: var(--ink-2);
+}
+.interests li {
+  display: flex;
+  align-items: baseline;
+  gap: .7rem;
+  padding-block: .42rem;
+  border-bottom: 1px dotted var(--rule);
+}
+.interests li:last-child { border-bottom: 0; }
+.interests li::before {
+  content: "—";
+  color: var(--accent);
+  opacity: .5;
+  font-size: .8rem;
+}
+
+/* publications */
+.pubs {
+  list-style: none;
+  counter-reset: p;
+  margin: 0;
+  padding: 0;
+}
+.pubs li {
+  counter-increment: p;
+  position: relative;
+  padding: .95rem 0 .95rem 2.1rem;
+  border-bottom: 1px dotted var(--rule);
+}
+.pubs li:last-child { border-bottom: 0; }
+.pubs li::before {
+  content: "[" counter(p) "]";
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  font-family: var(--sans);
+  font-size: .7rem;
+  letter-spacing: .02em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.pubs .t {
+  font-size: 1.045rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.pubs .authors {
+  font-size: .93rem;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: .1rem;
+}
+.pubs .m {
+  margin-top: .3rem;
+  font-family: var(--sans);
+  font-size: .805rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.pubs .m i { font-family: var(--serif); font-size: .92rem; color: var(--ink-2); }
+.pubs .m a { font-size: .79rem; letter-spacing: .01em; }
+.pubs .acc {
+  font-family: var(--sans);
+  font-size: .655rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: .1rem .38rem;
+  border-radius: 3px;
+  margin-right: .35rem;
+}
+
+/* experience */
+.cv { margin: 0; padding: 0; }
+.cv-row {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: .1rem 1.4rem;
+  padding-block: .85rem;
+  border-bottom: 1px dotted var(--rule);
+}
+.cv-row:last-child { border-bottom: 0; }
+.cv-row dt {
+  white-space: nowrap;
+  font-family: var(--sans);
+  font-size: .74rem;
+  letter-spacing: .02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  padding-top: .3rem;
+}
+.cv-row dd { margin: 0; }
+.cv-row .role { font-size: 1.02rem; line-height: 1.45; }
+.cv-row .where {
+  font-family: var(--sans);
+  font-size: .825rem;
+  color: var(--ink-2);
+  margin-top: .1rem;
+}
+.cv-row .note {
+  font-family: var(--sans);
+  font-size: .79rem;
+  color: var(--muted);
+  margin-top: .15rem;
+}
+.cv-row .note a { color: var(--muted); border-bottom-color: var(--rule); }
+.cv-row .note a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ============ footer ============ */
+.foot {
+  border-top: 1px solid var(--rule);
+  padding-block: 2.1rem 3.2rem;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: .765rem;
+  letter-spacing: .03em;
+  color: var(--muted);
+}
+.foot .mark {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  color: var(--accent);
+  opacity: .8;
+  display: block;
+  margin-bottom: .5rem;
+}
+.foot p + p { margin-top: .45rem; }
+.foot a { color: var(--muted); border-bottom-color: var(--rule); }
+.foot a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* ============ responsive ============ */
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .face { width: 104px; height: 104px; }
+  .masthead nav { gap: .3rem 1rem; font-size: .67rem; }
+  .cv-row { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .cv-row dt { padding-top: 0; }
+  .pubs li { padding-left: 1.85rem; }
+  .pubs li::before { top: 1rem; }
+}
+@media print {
+  body { font-size: 10.5pt; }
+  .masthead { padding-block: 0 12pt; }
+  .masthead nav, .foot { display: none; }
+  .face { width: 26mm; height: 26mm; }
+  .section { padding-block: 10pt; break-inside: avoid; }
+  .pubs li, .cv-row { break-inside: avoid; }
+}
+</style>
 </head>
 
-
-<body style="background-image: url('BG.jpg'); background-size: cover;">
 <body>
-  <!-- 页面内容 -->
-</body>
+<div class="column" id="top">
 
-<h1> <p align="left">Junpeng Jiao's Homepage<h1></p>
+  <header class="masthead">
+    <img class="face" src="assets/photo.jpg" width="1000" height="1250"
+         alt="Portrait of Junpeng Jiao">
 
+    <h1>Junpeng Jiao</h1>
+    <p class="cn" lang="zh-Hans">焦骏鹏</p>
 
+    <p class="title">Assistant Professor, YMSC <span>·</span> Tsinghua University</p>
 
-<h2>Junpeng Jiao(焦骏鹏)</h2>
-<img src="JQ3A3954.jpg" alt="Junpeng Jiao's photo" width="200" style="float: right; margin: 0 0 20px 20px;">
+    <p class="contact">
+      <a href="mailto:jiao_jp@tsinghua.edu.cn">jiao_jp@tsinghua.edu.cn</a>
+      <span>Shuangqing Building 510 (双清楼510)</span>
+    </p>
 
-<h2>About me
-<h3> </h3>
- <p> I am now an assistant professor at <a href="https://ymsc.tsinghua.edu.cn/">Yau Mathematical Sciences Center(YMSC)<a/>, <a href="https://www.tsinghua.edu.cn/">Tsinghua University(THU)</a> </p>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+    </nav>
+  </header>
 
- <p> Email: jiao_jp@tsinghua.edu.cn </p> 
-    
- <p> Office: Shuangqing Building 510(双清楼510), YMSC, THU, Beijing, China.</p>
+  <main>
 
+    <section class="section" id="about">
+      <h2><span class="n">01</span> About</h2>
+      <p class="prose">I am an assistant professor at the
+        <a href="https://ymsc.tsinghua.edu.cn/">Yau Mathematical Sciences Center (YMSC)</a>,
+        <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a>. I work in birational
+        geometry, and I am especially interested in boundedness problems in high-dimensional
+        algebraic geometry.</p>
+    </section>
 
- <h3>Experience</h3>
-    <li> 2022.09-2025.09, Postdoc. <a href="https://ymsc.tsinghua.edu.cn/">Yau Mathematical Sciences Center(YMSC)<a/>, <a href="https://www.tsinghua.edu.cn/">Tsinghua University(THU)</a></p>
-         <p> Mentor: Prof. <a href="https://ymsc.tsinghua.edu.cn/en/info/1031/1892.htm#:~:text=(1)%20C.%20Bir">Cauher Birkar</a></p>
-    
-    <li> 2018.09-2022.07, Doc. <a href="https://www.utah.edu/">The University of Utah</a>, <a href="https://www.math.utah.edu/">Mathmatical Department</a></p>
-         <p> Advisor: Prof. <a href="https://www.math.utah.edu/~hacon">Christopher Hacon</a></p>
-    
-    <li> 2015.09-2018.08, MA of Mathematics <a href="https://www.math.pku.edu.cn/">School of Mathematical Science</a>, <a href="https://www.pku.edu.cn/">Peking University</a></p>
-         <p> Advisor: Prof. <a href="https://web.math.princeton.edu/~chenyang/#:~:text=Chenyang%20Xu.%20Email:%20(my%20first%20name)***%20(remove%20all%20*)%20AT">Chenyang Xu(许晨阳)</a>. </p>
+    <section class="section" id="research">
+      <h2><span class="n">02</span> Research</h2>
+      <p class="prose">My research concerns the <strong>minimal model program</strong> and
+        <strong>singularity theory</strong>, with a focus on <strong>boundedness</strong> —
+        whether the objects we study form limited families in each dimension.</p>
 
-    <li> 2011.09-2015.07, BS of Mathematics <a href="https://www.math.pku.edu.cn/">School of Mathematical Science</a>, <a href="https://www.pku.edu.cn/">Peking University</a> </p>
-     
+      <ul class="interests">
+        <li>Birational geometry</li>
+        <li>Minimal Model Program</li>
+        <li>Singularity theory</li>
+        <li>Boundedness in high-dimensional algebraic geometry</li>
+      </ul>
+    </section>
 
+    <section class="section" id="publications">
+      <h2><span class="n">03</span> Publications</h2>
 
+      <ol class="pubs">
 
+        <li>
+          <p class="t">On the finiteness of ample models</p>
+          <p class="m"><i>Mathematical Research Letters</i>, vol. 29 (2022), no. 3, article 6
+            · <a href="https://intlpress.com/site/pub/files/_fulltext/journals/mrl/2022/0029/0003/MRL-2022-0029-0003-a006.pdf">PDF</a></p>
+        </li>
 
-     
-<h2>Research</h2>
- 
- <p>I am interested in Birational geometry, Minimal Model Program, and Singularity theory. Especially boundedness in high-dimensional algebraic geometry.</p>
- 
-<h3>Papers and Preprints</h3>
- <ol>
-    <li> on the finiteness of ample models
-         <p><b> <a href="https://intlpress.com/site/pub/files/_fulltext/journals/mrl/2022/0029/0003/MRL-2022-0029-0003-a006.pdf">Mathematical Research Letters, vol. 29 (2022) no. 3, article 6 - intlpress.com.<a/></p>
+        <li>
+          <p class="t">Boundedness of polarized Calabi–Yau fibrations</p>
+          <p class="m"><i>Journal of Differential Geometry</i>, vol. 130 (2025), no. 3, 635–675
+            · <a href="https://projecteuclid.org/journals/journal-of-differential-geometry/volume-130/issue-3/Boundedness-of-polarized-log-CalabiYau-fibrations/10.4310/jdg/1749495319.short">DOI</a></p>
+        </li>
 
-          
-    <li> Boundedness of polarized Calabi-Yau fibrations
-         <p><a href="https://projecteuclid.org/journals/journal-of-differential-geometry/volume-130/issue-3/Boundedness-of-polarized-log-CalabiYau-fibrations/10.4310/jdg/1749495319.short">J. Differential Geom. 130 (3), 635-675, (July 2025) DOI: 10.4310/jdg/1749495319<a/></p>
+        <li>
+          <p class="t">Boundedness of slc degenerations of polarized log Calabi–Yau pairs</p>
+          <p class="m"><i>Forum of Mathematics, Sigma</i>, vol. 13 (2025), e144
+            · <a href="https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/boundedness-of-slc-degenerations-of-polarized-log-calabiyau-pairs/67256F266E31A03774B77C3EF89F6E36">DOI</a></p>
+        </li>
 
-      
-    <li> Boundedness of slc degenerations of polarized log Calabi--Yau pairs
-        <p> <a href="https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/boundedness-of-slc-degenerations-of-polarized-log-calabiyau-pairs/67256F266E31A03774B77C3EF89F6E36">Forum of Mathematics, Sigma, Volume 13, 2025, e144</a></p> 
+        <li>
+          <p class="t">On the boundedness of canonical models</p>
+          <p class="m"><i>Algebra &amp; Number Theory</i>, vol. 19 (2025), no. 11, 2119–2162
+            · <a href="https://msp.org/ant/2025/19-11/p02.xhtml">DOI</a></p>
+        </li>
 
-    <li> On the boundedness of canonical models
-         <p><a href="https://msp.org/ant/2025/19-11/p02.xhtml">Algebraic & Number Theory, Vol. 19 (2025), No. 11, 2119–2162<a/></p>
+        <li>
+          <p class="t">On structures and discrepancies of klt Calabi–Yau pairs</p>
+          <p class="m">Preprint, arXiv:2405.13321
+            · <a href="https://arxiv.org/abs/2405.13321">arXiv</a></p>
+        </li>
 
-    <li> On structures and discrepancies of klt Calabi--Yau pairs
-         <p><a href="https://arxiv.org/abs/2405.13321">arXiv:2405.13321<a/></p>
-          
-    <li> (With Jihao Liu and Lingyao Xie<a/>) 
-        On generalized lc pairs with b-log abundant nef part
-        <p> <a href = "https://arxiv.org/abs/2202.11256">arXiv:2202.11256<a/> </p>
+        <li>
+          <p class="authors">with Jihao Liu and Lingyao Xie</p>
+          <p class="t">On generalized lc pairs with b-log abundant nef part</p>
+          <p class="m">Preprint, arXiv:2202.11256
+            · <a href="https://arxiv.org/abs/2202.11256">arXiv</a></p>
+        </li>
 
-    <li> (With Jingjun Han, Jihao Liu, and Mengchu Li<a/>) 
-        Volume of algebraically integrable foliations and locally stable families
-        <p> Accepted by <b> Transactions of the American Mathematical Society</b>
-        <p> <a href = "https://arxiv.org/abs/2406.16604">arXiv:2406.16604<a/> </p>
+        <li>
+          <p class="authors">with Jingjun Han, Jihao Liu and Mengchu Li</p>
+          <p class="t">Volume of algebraically integrable foliations and locally stable families</p>
+          <p class="m"><span class="acc">Accepted</span><i>Transactions of the American
+            Mathematical Society</i> · <a href="https://arxiv.org/abs/2406.16604">arXiv</a></p>
+        </li>
 
-    <li> (With Xiaowei Jiang and Minzhe Zhu<a/>) 
-        Boundedness of Polarized Log Calabi-Yau Fibrations with Bounded Bases
-       <p> Accepted by <b> Journal of the European Mathematical Society</b>
-        <p> <a href = "https://arxiv.org/abs/2504.05243">arXiv:2504.05243<a/> </p>
+        <li>
+          <p class="authors">with Xiaowei Jiang and Minzhe Zhu</p>
+          <p class="t">Boundedness of polarized log Calabi–Yau fibrations with bounded bases</p>
+          <p class="m"><span class="acc">Accepted</span><i>Journal of the European Mathematical
+            Society</i> · <a href="https://arxiv.org/abs/2504.05243">arXiv</a></p>
+        </li>
 
-    <li> Discreteness of volumes of divisors on Calabi-Yau type varieties
-        <p> <a href = "https://arxiv.org/abs/2508.05082">arXiv:2508.05082<a/> </p>
+        <li>
+          <p class="t">Discreteness of volumes of divisors on Calabi–Yau type varieties</p>
+          <p class="m">Preprint, arXiv:2508.05082
+            · <a href="https://arxiv.org/abs/2508.05082">arXiv</a></p>
+        </li>
 
-    <li> Volumes of divisors in a family and variation of singularities of linear systems
-     <p> Accepted by <b> International Mathematics Research Notices</b>
-        <p> <a href = "https://arxiv.org/abs/2504.16676">arXiv:2504.16676<a/> </p>
-    </ol>
+        <li>
+          <p class="t">Volumes of divisors in a family and variation of singularities of
+            linear systems</p>
+          <p class="m"><span class="acc">Accepted</span><i>International Mathematics Research
+            Notices</i> · <a href="https://arxiv.org/abs/2504.16676">arXiv</a></p>
+        </li>
 
- 
-  
+      </ol>
+    </section>
+
+    <section class="section" id="experience">
+      <h2><span class="n">04</span> Experience</h2>
+
+      <dl class="cv">
+        <div class="cv-row">
+          <dt>2022.09 – 2025.09</dt>
+          <dd>
+            <p class="role">Postdoctoral Fellow</p>
+            <p class="where">Yau Mathematical Sciences Center,
+              <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a></p>
+            <p class="note">Mentor: Prof.
+              <a href="https://ymsc.tsinghua.edu.cn/en/info/1031/1892.htm">Caucher Birkar</a></p>
+          </dd>
+        </div>
+
+        <div class="cv-row">
+          <dt>2018.09 – 2022.07</dt>
+          <dd>
+            <p class="role">Ph.D. in Mathematics</p>
+            <p class="where">The University of Utah, Department of Mathematics</p>
+            <p class="note">Advisor: Prof.
+              <a href="https://www.math.utah.edu/~hacon">Christopher Hacon</a></p>
+          </dd>
+        </div>
+
+        <div class="cv-row">
+          <dt>2015.09 – 2018.08</dt>
+          <dd>
+            <p class="role">M.A. in Mathematics</p>
+            <p class="where">School of Mathematical Sciences,
+              <a href="https://www.pku.edu.cn/">Peking University</a></p>
+            <p class="note">Advisor: Prof.
+              <a href="https://web.math.princeton.edu/~chenyang/">Chenyang Xu</a>
+              <span lang="zh-Hans">(许晨阳)</span></p>
+          </dd>
+        </div>
+
+        <div class="cv-row">
+          <dt>2011.09 – 2015.07</dt>
+          <dd>
+            <p class="role">B.S. in Mathematics</p>
+            <p class="where">School of Mathematical Sciences,
+              <a href="https://www.pku.edu.cn/">Peking University</a></p>
+          </dd>
+        </div>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <span class="mark" aria-hidden="true">⁂</span>
+    <p>© <span id="year">2026</span> Junpeng Jiao · <a href="#top">Back to top ↑</a></p>
+    <p><a href="mailto:jiao_jp@tsinghua.edu.cn">jiao_jp@tsinghua.edu.cn</a></p>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
