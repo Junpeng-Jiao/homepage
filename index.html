@@ -281,6 +281,51 @@ main { padding-bottom: 8px; }
   margin-right: .35rem;
 }
 
+/* ongoing work */
+.wip {
+  border-left: 1px solid var(--rule);
+  padding: .1rem 0 .1rem 1.15rem;
+}
+.wip-tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: .655rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: .1rem .38rem;
+  border-radius: 3px;
+}
+.wip-title {
+  margin-top: .62rem;
+  font-size: 1.16rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.wip-sub {
+  margin-top: .12rem;
+  font-size: .99rem;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--ink-2);
+}
+.wip-text {
+  margin-top: .55rem;
+  font-family: var(--sans);
+  font-size: .845rem;
+  line-height: 1.72;
+  color: var(--muted);
+}
+.wip-meta {
+  margin-top: .7rem;
+  font-family: var(--sans);
+  font-size: .735rem;
+  letter-spacing: .07em;
+  color: var(--muted);
+}
+
 /* experience */
 .cv { margin: 0; padding: 0; }
 .cv-row {
@@ -343,7 +388,7 @@ main { padding-bottom: 8px; }
 @media (max-width: 560px) {
   body { font-size: 16px; }
   .face { width: 104px; height: 104px; }
-  .masthead nav { gap: .3rem 1rem; font-size: .67rem; }
+  .masthead nav { gap: .3rem .55rem; font-size: .655rem; }
   .cv-row { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .cv-row dt { padding-top: 0; }
   .pubs li { padding-left: 1.85rem; }
@@ -380,6 +425,7 @@ main { padding-bottom: 8px; }
     <nav aria-label="Sections">
       <a href="#about">About</a>
       <a href="#research">Research</a>
+      <a href="#ongoing">Ongoing work</a>
       <a href="#publications">Publications</a>
       <a href="#experience">Experience</a>
     </nav>
@@ -410,8 +456,24 @@ main { padding-bottom: 8px; }
       </ul>
     </section>
 
+    <section class="section" id="ongoing">
+      <h2><span class="n">03</span> Ongoing work</h2>
+
+      <div class="wip">
+        <p class="wip-tag">Book in progress</p>
+        <p class="wip-title">From Morphisms to Varieties</p>
+        <p class="wip-sub">Absolute Reconstruction from Categories of Proper Morphisms</p>
+        <p class="wip-text">How much of a variety is determined by the bare category of proper
+          morphisms to it? The book settles this for birational models, finite covers, and flat
+          or smooth families: in each stated range every equivalence of categories is induced by
+          a unique absolute isomorphism of the bases — possibly twisting the complex scalars —
+          and the examples where it fails mark the boundary of the theorem.</p>
+        <p class="wip-meta">Draft manuscript · five parts, ten chapters</p>
+      </div>
+    </section>
+
     <section class="section" id="publications">
-      <h2><span class="n">03</span> Publications</h2>
+      <h2><span class="n">04</span> Publications</h2>
 
       <ol class="pubs">
 
@@ -483,7 +545,7 @@ main { padding-bottom: 8px; }
     </section>
 
     <section class="section" id="experience">
-      <h2><span class="n">04</span> Experience</h2>
+      <h2><span class="n">05</span> Experience</h2>
 
       <dl class="cv">
         <div class="cv-row">
